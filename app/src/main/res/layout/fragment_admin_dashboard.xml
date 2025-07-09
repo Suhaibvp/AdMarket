@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/llPie"
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/generic_small_padding"
+                android:layout_weight="1"
+                android:background="@drawable/current_score_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/generic_small_padding">
+
+                <TextView
+                    android:id="@+id/tvStatusUploads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="35 "
+
+                    android:textAppearance="@style/Theme.DrSafe.Headline5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/generic_small_padding"
+                    android:text="Users"
+                    android:textAppearance="@style/Theme.DrSafe.caption2"
+                    android:textSize="@dimen/text_16_sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/generic_small_padding"
+                android:layout_weight="1"
+                android:background="@drawable/current_score_bg"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/generic_small_padding">
+
+                <TextView
+                    android:id="@+id/tvTodaysUploads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="16"
+                    android:textAppearance="@style/Theme.DrSafe.Headline5"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/generic_small_padding"
+                    android:text="Spends"
+                    android:textAppearance="@style/Theme.DrSafe.caption2"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/text_16_sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llParams"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="@dimen/generic_large_padding"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/llPie"
+            app:layout_constraintStart_toStartOf="@id/llPie"
+            app:layout_constraintTop_toBottomOf="@id/llPie">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/generic_small_padding"
+                android:layout_weight="1"
+                android:background="@drawable/current_score_bg"
+                android:orientation="vertical"
+                android:padding="@dimen/generic_small_padding">
+
+                <TextView
+                    android:id="@+id/tvTodaysEarnings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="16"
+                    android:textAppearance="@style/Theme.DrSafe.Headline5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/generic_small_padding"
+                    android:text="Total Promotions"
+                    android:textAppearance="@style/Theme.DrSafe.caption2"
+                    android:textSize="@dimen/text_16_sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/generic_small_padding"
+                android:layout_weight="1"
+                android:background="@drawable/current_score_bg"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/generic_small_padding">
+
+                <TextView
+                    android:id="@+id/tvTotalViews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="16"
+                    android:textAppearance="@style/Theme.DrSafe.Headline5" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/generic_small_padding"
+                    android:text="______________"
+                    android:textAppearance="@style/Theme.DrSafe.caption2"
+                    android:textSize="@dimen/text_16_sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

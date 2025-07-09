@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AdMarket</string>
+    <string-array name="score_options">
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+</resources>

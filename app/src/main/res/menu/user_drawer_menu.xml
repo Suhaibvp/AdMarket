@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_dashboard" />
+    <item
+        android:id="@+id/nav_clubMembers"
+        android:title="My Club"
+        android:icon="@drawable/ic_people" />
+    <item
+        android:id="@+id/nav_wallet"
+        android:title="Wallet"
+        android:icon="@drawable/ic_wallet" />
+    <item
+        android:id="@+id/nav_redeem_coupon"
+        android:title="Redeem Coupon"
+        android:icon="@drawable/icon_coupon" />
+    <item
+        android:id="@+id/nav_our_company"
+        android:title="Our Company"
+        android:icon="@drawable/ic_info" />
+
+</menu>

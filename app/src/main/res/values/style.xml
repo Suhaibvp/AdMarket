@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DrSafe.caption1" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/figtree</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+    </style>
+    <style name="Theme.DrSafe.caption2" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/figtree</item>
+        <item name="android:textSize">@dimen/text_12_sp</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+    </style>
+    <style name="Theme.DrSafe.Headline5" parent="TextAppearance.MaterialComponents.Headline5">
+        <item name="fontFamily">@font/figtree</item>
+        <item name="android:textColor">@color/colorOnSurface</item>
+    </style>
+    <style name="Theme.DrSafe.headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/figtree</item>
+        <item name="android:textColor">@color/colorOnSurface</item>
+    </style>
+    <style name="Theme.DrSafe.body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="fontFamily">@font/figtree</item>
+        <item name="android:textSize">@dimen/text_16_sp</item>
+        <item name="android:textColor">@color/colorOnSurface</item>
+    </style>
+
+    <style name="DrawerItemStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,31 @@
+<!-- dialog_edit_user.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Name"
+        android:padding="@dimen/dimen_10sp"/>
+
+    <TextView
+        android:id="@+id/tv_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        android:padding="@dimen/dimen_10sp"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_verified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verified"
+        android:padding="@dimen/dimen_10sp"/>
+
+
+</LinearLayout>

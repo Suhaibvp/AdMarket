@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+  >
+
+    <TextView
+        android:id="@+id/tv_index"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="1"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16dp"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Name"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16dp"/>
+
+    <TextView
+        android:id="@+id/tv_referral"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="ADS0000"
+        android:textSize="@dimen/_16dp"/>
+
+    <TextView
+        android:id="@+id/tv_mobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="9876543210"
+        android:textSize="@dimen/_16dp"/>
+    <Button
+        android:id="@+id/btn_editUser"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:layout_weight="5"/>
+</LinearLayout>
