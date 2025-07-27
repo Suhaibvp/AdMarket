@@ -16,7 +16,7 @@
         android:text="1"
         android:gravity="center"
         android:textStyle="bold"
-        android:textSize="@dimen/_16dp"/>
+        android:textSize="8dp"/>
 
     <TextView
         android:id="@+id/tv_name"
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="3"
         android:text="ADS0000"
-        android:textSize="@dimen/_16dp"/>
+        android:textSize="12dp"/>
 
     <TextView
         android:id="@+id/tv_mobile"
@@ -41,11 +41,18 @@
         android:layout_height="wrap_content"
         android:layout_weight="4"
         android:text="9876543210"
-        android:textSize="@dimen/_16dp"/>
+        android:textSize="12dp"/>
     <Button
         android:id="@+id/btn_editUser"
-        android:layout_width="0dp"
+        android:layout_width="10dp"
         android:layout_height="wrap_content"
         android:text="Edit"
-        android:layout_weight="5"/>
+        android:layout_weight="3"
+        android:src="@drawable/ic_edit"/>
+    <Button
+        android:id="@+id/btn_deleteUser"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_weight="3"/>
 </LinearLayout>

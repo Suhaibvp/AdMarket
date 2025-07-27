@@ -50,14 +50,42 @@ class ManageUsersFragment : Fragment() {
                         allUsers.add(user)
                     }
                 }
+                binding.userCountText.text = "Total Users: ${allUsers.size}"
 
                 binding.recyclerLevel1.apply {
-                    adapter = UserAdapter(allUsers) { editUser(it) }
+                    adapter = UserAdapter(allUsers, { editUser(it) }, { confirmDeleteUser(it) })
                     layoutManager = LinearLayoutManager(requireContext())
                 }
             }
             .addOnFailureListener {
                 Toast.makeText(requireContext(), "Failed to load users", Toast.LENGTH_SHORT).show()
+            }
+    }
+    private fun confirmDeleteUser(user: User) {
+        AlertDialog.Builder(requireContext())
+            .setTitle("Delete User")
+            .setMessage("Are you sure you want to delete ${user.name}? This action cannot be undone.")
+            .setPositiveButton("Yes") { _, _ ->
+                deleteUser(user)
+            }
+            .setNegativeButton("No", null)
+            .show()
+    }
+    private fun deleteUser(user: User) {
+        val userRef = Firebase.firestore.collection("users").document(user.email)
+
+        userRef.delete()
+            .addOnSuccessListener {
+                Toast.makeText(requireContext(), "User deleted", Toast.LENGTH_SHORT).show()
+                // ✅ Update UI locally (optional optimization)
+                (binding.recyclerLevel1.adapter as? UserAdapter)?.let {
+                    val updatedList = it.users.toMutableList()
+                    updatedList.remove(user)
+                    binding.recyclerLevel1.adapter = UserAdapter(updatedList, { editUser(it) }, { confirmDeleteUser(it) })
+                }
+            }
+            .addOnFailureListener {
+                Toast.makeText(requireContext(), "Failed to delete user", Toast.LENGTH_SHORT).show()
             }
     }
 

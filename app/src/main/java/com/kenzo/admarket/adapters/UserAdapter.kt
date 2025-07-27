@@ -11,8 +11,9 @@ import com.kenzo.admarket.R
 import com.kenzo.admarket.model.User
 
 class UserAdapter(
-    private val users: List<User>,
-    private val onEditClick: (User) -> Unit
+    internal val users: List<User>,
+    private val onEditClick: (User) -> Unit,
+    private val onDeleteClick: (User) -> Unit
 ) : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     inner class UserViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -21,6 +22,7 @@ class UserAdapter(
         val referral = view.findViewById<TextView>(R.id.tv_referral)
         val mobile = view.findViewById<TextView>(R.id.tv_mobile)
         val btnEdit = view.findViewById<Button>(R.id.btn_editUser)
+        val btnDelete=view.findViewById<Button>(R.id.btn_deleteUser)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
@@ -35,6 +37,9 @@ class UserAdapter(
         holder.referral.text = user.sponsorId
         holder.mobile.text = user.contact
         holder.btnEdit.setOnClickListener { onEditClick(user) }
+        holder.btnDelete.setOnClickListener {
+            onDeleteClick(user)
+        }
     }
 
     override fun getItemCount(): Int = users.size

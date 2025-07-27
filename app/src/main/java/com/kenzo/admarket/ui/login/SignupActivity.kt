@@ -37,7 +37,7 @@ class SignupActivity : AppCompatActivity() {
             val district = binding.district.text.toString()
             val password = binding.password.text.toString().trim()
             val confirmPassword = binding.confirmPassword.text.toString()
-            val sponsorId = binding.sponsorId.text.toString()
+            val sponsorId = binding.sponsorId.text.toString().trim()
 
             if (name.isEmpty() || email.isEmpty() || contact.isEmpty() ||
                 state.isEmpty() || district.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()
